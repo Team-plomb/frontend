@@ -1,13 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import heroimg from "../assets/heroimg.png";
 
 function HeroSection() {
-  const Navigate = useNavigate();
-
-  const handleClick = () => {
-    Navigate("/Admin");
-  };
   return (
     <div>
       <div className=" justify-between md:mx-28 md:pt-32 pt-16 flex flex-col-reverse md:flex-row items-center md:text-start">
@@ -26,12 +21,12 @@ function HeroSection() {
             future of Decentralized Voting, how it eliminates <br /> rigging,
             and improves transparency.
           </p>
-          <button
-            onClick={handleClick}
+          <Link
+            to="Poll"
             className="bg-[#00ACE3] mt-8 rounded-md py-2 px-6 font-semibold "
           >
             Create Poll
-          </button>
+          </Link>
         </div>
 
         <div className="">

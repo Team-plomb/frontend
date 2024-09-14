@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import plomb from "../assets/plomb.png";
 import { NavUtils } from "./NavUtils";
+import { Wallet } from "./Wallet";
+// import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 function Navbar() {
   return (
@@ -12,16 +14,18 @@ function Navbar() {
       <div className="text-md space-x-4 font-bold">
         {NavUtils.map((item, index) => {
           return (
-            <Link to={item.url} key={index} className="hover:underline">
+            <Link to={item.url} key={index} className="hover:underline ">
               {item.name}
             </Link>
           );
         })}
       </div>
 
-      <button className="bg-[#00ACE3] md:px-4 md:py-2 rounded-md font-semibold md:mr-12">
+      {/* <button>
         connect button
-      </button>
+      </button> */}
+      {/* <ConnectButton /> */}
+      <Wallet>Connect Wallet</Wallet>
     </nav>
   );
 }
