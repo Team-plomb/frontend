@@ -9,7 +9,7 @@ export const NavUtils = [
   },
   {
     name: "About us",
-    url: "./src/pages/About",
+    url: "/About",
   },
   {
     name: "Contact us",
