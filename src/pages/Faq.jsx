@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Navbar from "../component/Navbar";
+import Footer from "../component/Footer";
 
 const faqs = [
   {
@@ -36,35 +38,39 @@ function Faq() {
   };
 
   return (
-    <div className="min-h-screen p-4 py-10">
-      <h1 className="text-3xl font-bold text-center text-[#00ACE3] mb-10 pt-10">
-        Frequently Asked Questions
-      </h1>
-      <div className="max-w-4xl mx-auto space-y-4">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className="bg-[#313131] shadow-md rounded-md p-5 cursor-pointer"
-            onClick={() => toggleAnswer(index)}
-          >
-            <div className="flex justify-between items-center">
-              <h2 className="text-lg font-semibold text-[#00ACE3]">
-                {faq.question}
-              </h2>
-              <span
-                className={`transform transition-transform duration-200 ${
-                  openIndex === index ? "rotate-180" : ""
-                }`}
-              >
-                ⯆
-              </span>
+    <div className="bg-[#252525] text-white">
+      {/* <Navbar /> */}
+      <div className="min-h-screen p-4 py-10">
+        <h1 className="text-3xl font-bold text-center text-[#00ACE3] mb-10 pt-10">
+          Frequently Asked Questions
+        </h1>
+        <div className="max-w-4xl mx-auto space-y-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="bg-[#313131] shadow-md rounded-md p-5 cursor-pointer"
+              onClick={() => toggleAnswer(index)}
+            >
+              <div className="flex justify-between items-center">
+                <h2 className="text-lg font-semibold text-[#00ACE3]">
+                  {faq.question}
+                </h2>
+                <span
+                  className={`transform transition-transform duration-200 ${
+                    openIndex === index ? "rotate-180" : ""
+                  }`}
+                >
+                  ⯆
+                </span>
+              </div>
+              {openIndex === index && (
+                <p className="mt-4 text-gray-200">{faq.answer}</p>
+              )}
             </div>
-            {openIndex === index && (
-              <p className="mt-4 text-gray-200">{faq.answer}</p>
-            )}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+      <Footer />
     </div>
   );
 }

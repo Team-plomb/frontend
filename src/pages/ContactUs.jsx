@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Footer from "../component/Footer";
 
 function ContactUs() {
   const [name, setName] = useState("");
@@ -52,7 +53,7 @@ function ContactUs() {
   };
 
   return (
-    <div>
+    <div className="bg-[#252525] text-white">
       <h1 className="text-[#00ACE3] text-2xl text-center font-semibold pt-32">
         Contact Us
       </h1>
@@ -140,6 +141,7 @@ function ContactUs() {
           </button>
         </div>
       </form>
+      <Footer />
     </div>
   );
 }

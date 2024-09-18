@@ -11,6 +11,7 @@ function App() {
       <main style={{ backgroundColor: "#252525", color: "white" }}>
         <Navbar />
         <LandingPage />
+
         <Footer />
       </main>
     </Provider>

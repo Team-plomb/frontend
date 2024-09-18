@@ -7,6 +7,9 @@ import Faq from "./pages/Faq.jsx";
 import About from "./pages/About.jsx";
 import ContactUs from "./pages/ContactUs.jsx";
 import Polls from "./pages/Polls.jsx";
+import Votes from "./pages/Votes.jsx";
+import { Results } from "./pages/Results.jsx";
+import Admin from "./pages/Admin.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,8 +28,20 @@ const router = createBrowserRouter([
     element: <ContactUs />,
   },
   {
-    path: "/Poll",
+    path: "/Polls",
     element: <Polls />,
+  },
+  {
+    path: "/Votes",
+    element: <Votes />,
+  },
+  {
+    path: "/Results",
+    element: <Results />,
+  },
+  {
+    path: "/Admin",
+    element: <Admin />,
   },
 ]);
 createRoot(document.getElementById("root")).render(
