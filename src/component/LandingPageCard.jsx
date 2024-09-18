@@ -2,8 +2,11 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-function LandingPageCard({ pic, header, paragraph, button, onClick }) {
+function LandingPageCard({ pic, header, paragraph, button, route }) {
   const navigate = useNavigate();
+  const handleNavigation = () => {
+    navigate(route);
+  };
 
   return (
     <div className="">
@@ -22,7 +25,7 @@ function LandingPageCard({ pic, header, paragraph, button, onClick }) {
           </div>
           <div className="flex justify-end mt-8">
             <div className="border-[#00ACE3] border-2 flex w-fit rounded-md px-4 py-2 gap-2 items-center">
-              <button onClick={onClick} className="font-semibold">
+              <button onClick={handleNavigation} className="font-semibold">
                 {button}
               </button>
               <FaArrowRight className="w-4 h-4" />

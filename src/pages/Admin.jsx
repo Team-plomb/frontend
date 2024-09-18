@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "../component/Footer";
 
 const Admin = () => {
   const [step, setStep] = useState(0);
@@ -90,7 +91,7 @@ const Admin = () => {
   };
 
   return (
-    <div className="bg-[#252525]">
+    <div className="bg-[#252525] text-white">
       <section className="md:mx-52 pt-20 mx-4 ">
         <h1 className="text-[#00ACE3] text-2xl text-center font-semibold">
           Admin Dashboard
@@ -279,6 +280,7 @@ const Admin = () => {
           </button>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

@@ -6,10 +6,12 @@ import Oluwafemi from "../assets/Oluwafemi@1x.png";
 import Docky from "../assets/Docky@1x.png";
 import Simi from "../assets/Simi@1x.png";
 import Rampop from "../assets/Rampop@1x.png";
+import Navbar from "../component/Navbar";
+import Footer from "../component/Footer";
 
 function About() {
   return (
-    <div>
+    <div className="bg-[#252525] text-white">
       <AboutPlomb />
       <div className="md:mx-52 mx-4">
         <div>
@@ -55,6 +57,7 @@ function About() {
           the future of their community and country.
         </p>
       </div>
+      <Footer />
     </div>
   );
 }
